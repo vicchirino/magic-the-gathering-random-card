@@ -28,7 +28,6 @@ struct RandomCardView: View {
                             switch phase {
                             case .empty:
                                 EmptyView()
-        
                             case .success(let image):
                                 image.resizable()
                                     .aspectRatio(contentMode: .fit)
@@ -43,7 +42,6 @@ struct RandomCardView: View {
                                 Color.orange
                             }
                         }
-                        
                     }
                     .padding(20)
                     .frame(width: proxy.size.width, height: proxy.size.height, alignment: .topLeading)
@@ -51,7 +49,6 @@ struct RandomCardView: View {
                     Divider()
 
                     VStack(spacing: 20) {
-                        
                         CardInformationView(informationTitle: "Type", informationDescription: randomCard?.type)
                         
                         CardInformationView(informationTitle: "Rarity", informationDescription: randomCard?.rarity)
@@ -67,7 +64,6 @@ struct RandomCardView: View {
                             switch phase {
                             case .empty:
                                 EmptyView()
-        
                             case .success(let image):
                                 image.resizable()
                                     .aspectRatio(contentMode: .fit)
@@ -88,8 +84,6 @@ struct RandomCardView: View {
                     }
                     .padding(20)
                     .frame(minWidth: proxy.size.width, minHeight: proxy.size.height, maxHeight: .infinity, alignment: .topLeading)
-//                    .background(Color.yellow)
-
             }
         }
         .background(Color(uiColor: .lightGrayColor))
