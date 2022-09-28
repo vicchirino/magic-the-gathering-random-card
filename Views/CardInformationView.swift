@@ -18,15 +18,14 @@ struct CardInformationView: View {
             
             if let _informationDescription = informationDescription {
                 Text(informationTitle)
-                    .bold()
+                    .font(.headline)
                     .underline()
-                    .font(Font.system(size: 25))
                 
                 Spacer()
                     .frame(height: 10)
                 
                 Text(_informationDescription)
-                    .font(Font.system(size: 20))
+                    .font(.subheadline)
                     .active(isItalic, Text.italic)
             }
         }

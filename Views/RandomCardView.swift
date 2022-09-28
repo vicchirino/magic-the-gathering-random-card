@@ -17,8 +17,8 @@ struct RandomCardView: View {
                 VStack(alignment: .center) {
                     VStack {
                         Text(randomCard?.name ?? "")
-                            .font(Font.system(size: 30))
-                            .bold()
+                            .font(.largeTitle)
+                            .underline()
                             .frame(maxWidth: .infinity, alignment: .center)
                         
                         Spacer()
