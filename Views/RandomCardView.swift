@@ -85,8 +85,8 @@ struct RandomCardView: View {
                     .padding(20)
                     .frame(minWidth: proxy.size.width, minHeight: proxy.size.height, maxHeight: .infinity, alignment: .topLeading)
             }
-        }
-        .background(Color(uiColor: .lightGrayColor))
+        }.redacted(reason: randomCard == nil ? .placeholder : [])
+                .background(Color(uiColor: .lightGrayColor))
         }
     }
 }
