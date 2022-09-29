@@ -14,16 +14,8 @@ struct RandomCardView: View {
     var body: some View {
         GeometryReader { proxy in
             ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .center) {
+                VStack(alignment: .center, spacing: 0) {
                     VStack {
-                        Text(randomCard?.name ?? "")
-                            .font(.largeTitle)
-                            .underline()
-                            .frame(maxWidth: .infinity, alignment: .center)
-                        
-                        Spacer()
-                            .frame(height: 60)
-                        
                         AsyncImage(url: URL(string: randomCard?.imageURIs.large ?? "")) { phase in
                             switch phase {
                             case .empty:
@@ -43,12 +35,27 @@ struct RandomCardView: View {
                             }
                         }
                     }
-                    .padding(20)
-                    .frame(width: proxy.size.width, height: proxy.size.height, alignment: .topLeading)
+                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                    .frame(width: proxy.size.width, height: proxy.size.width * 1.39, alignment: .topLeading)
+                               
+                    
+                    Button {
+                        print("Add to favorites")
+                    } label: {
+                        HStack {
+                            Image(systemName: "suit.heart")
+                                .resizable()
+                                .frame(width: 25, height: 25, alignment: .center)
+                            Text("Add to favorites")
+                        }.foregroundColor(.primary)
+                    }.padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
                     Divider()
 
                     VStack(spacing: 20) {
+                        CardInformationView(informationTitle: "Name", informationDescription: randomCard?.name)
+                        
                         CardInformationView(informationTitle: "Type", informationDescription: randomCard?.type)
                         
                         CardInformationView(informationTitle: "Rarity", informationDescription: randomCard?.rarity)
@@ -85,6 +92,13 @@ struct RandomCardView: View {
                     .padding(20)
                     .frame(minWidth: proxy.size.width, minHeight: proxy.size.height, maxHeight: .infinity, alignment: .topLeading)
             }
+                .toolbar {
+                    Button {
+                        print("hola amego")
+                    } label: {
+                        Image(systemName: "heart.text.square.fill").foregroundColor(.primary)
+                    }
+                }
         }.redacted(reason: randomCard == nil ? .placeholder : [])
                 .background(Color(uiColor: .lightGrayColor))
         }

@@ -12,7 +12,11 @@ struct ContentView: View {
     @ObservedObject private var randomCardVM = RandomCardViewModel()
 
     var body: some View {
-        RandomCardView(randomCard: randomCardVM.randomCard)
+        NavigationView {
+            RandomCardView(randomCard: randomCardVM.randomCard)
+                .navigationTitle("Card of the day")
+        }
+        .navigationViewStyle(.stack)
         .onAppear {
             self.randomCardVM.fetchRandomCard()
         }

@@ -19,7 +19,6 @@ struct CardInformationView: View {
             if let _informationDescription = informationDescription {
                 Text(informationTitle)
                     .font(.headline)
-//                    .underline()
                 
                 Spacer()
                     .frame(height: 10)

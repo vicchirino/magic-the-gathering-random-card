@@ -31,6 +31,8 @@
 		8360469C28E4DD1D006CDE28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360469A28E4DD1D006CDE28 /* ContentView.swift */; };
 		8360469E28E4DEE7006CDE28 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8360469D28E4DEE7006CDE28 /* .gitignore */; };
 		8360469F28E4DEE7006CDE28 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8360469D28E4DEE7006CDE28 /* .gitignore */; };
+		836046A228E5D551006CDE28 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836046A028E5D551006CDE28 /* Model.xcdatamodeld */; };
+		836046A328E5D551006CDE28 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836046A028E5D551006CDE28 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,7 @@
 		8360469728E4D990006CDE28 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8360469A28E4DD1D006CDE28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8360469D28E4DEE7006CDE28 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		836046A128E5D551006CDE28 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 		8360464A28E483C6006CDE28 = {
 			isa = PBXGroup;
 			children = (
+				836046A028E5D551006CDE28 /* Model.xcdatamodeld */,
 				8360469D28E4DEE7006CDE28 /* .gitignore */,
 				8360469328E4D3A5006CDE28 /* Extensions */,
 				8360468C28E48F7F006CDE28 /* ViewModels */,
@@ -339,6 +343,7 @@
 				8360465728E483C6006CDE28 /* magic_databaseApp.swift in Sources */,
 				8360469B28E4DD1D006CDE28 /* ContentView.swift in Sources */,
 				8360469828E4D990006CDE28 /* UIColor.swift in Sources */,
+				836046A228E5D551006CDE28 /* Model.xcdatamodeld in Sources */,
 				8360468E28E48FBD006CDE28 /* RandomCardViewModel.swift in Sources */,
 				8360469128E4CF4B006CDE28 /* CardInformationView.swift in Sources */,
 			);
@@ -355,6 +360,7 @@
 				8360468328E48772006CDE28 /* Card.swift in Sources */,
 				8360469C28E4DD1D006CDE28 /* ContentView.swift in Sources */,
 				8360469928E4D990006CDE28 /* UIColor.swift in Sources */,
+				836046A328E5D551006CDE28 /* Model.xcdatamodeld in Sources */,
 				8360468F28E48FBD006CDE28 /* RandomCardViewModel.swift in Sources */,
 				8360469228E4CF4B006CDE28 /* CardInformationView.swift in Sources */,
 			);
@@ -675,6 +681,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		836046A028E5D551006CDE28 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				836046A128E5D551006CDE28 /* Model.xcdatamodel */,
+			);
+			currentVersion = 836046A128E5D551006CDE28 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8360464B28E483C6006CDE28 /* Project object */;
 }
