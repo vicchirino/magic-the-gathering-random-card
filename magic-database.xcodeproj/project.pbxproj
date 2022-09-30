@@ -186,11 +186,8 @@
 		8360468428E48ADE006CDE28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8360468528E48B0E006CDE28 /* RandomCardView.swift */,
-				8360469028E4CF4B006CDE28 /* CardInformationView.swift */,
+				839FAD1D28E7714100BC816C /* RandomCardView */,
 				8360469A28E4DD1D006CDE28 /* ContentView.swift */,
-				836046A428E5E31E006CDE28 /* CardAsyncImageView.swift */,
-				839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +215,17 @@
 				8360469728E4D990006CDE28 /* UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		839FAD1D28E7714100BC816C /* RandomCardView */ = {
+			isa = PBXGroup;
+			children = (
+				839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */,
+				836046A428E5E31E006CDE28 /* CardAsyncImageView.swift */,
+				8360469028E4CF4B006CDE28 /* CardInformationView.swift */,
+				8360468528E48B0E006CDE28 /* RandomCardView.swift */,
+			);
+			path = RandomCardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
