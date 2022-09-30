@@ -47,12 +47,13 @@ private struct Information {
 
 struct CardInformationStackView: View {
     fileprivate var information: [Information]
+    fileprivate var imageURL: String
     var body: some View {
         VStack(spacing: 20) {
             ForEach(information.filter { $0.type != .imageURL}, id: \.type.hashValue) { info in
                 CardInformationView(informationTitle: info.getTitle(), informationDescription: info.text)
             }
-            CardAsyncImageView(cardImageURL: information.filter { $0.type == .imageURL }.first?.text)
+            CardAsyncImageView(cardImageURL: imageURL)
         }
     }
 }
@@ -67,6 +68,7 @@ extension CardInformationStackView {
     init(card: Card?) {
         guard let card = card else {
             self.information = []
+            self.imageURL = ""
             return
         }
         var cardInformation: [Information] = []
@@ -80,5 +82,6 @@ extension CardInformationStackView {
         cardInformation.append(Information(text: card.setName, type: .set))
         cardInformation.append(Information(text: card.artist, type: .artist))
         self.information = cardInformation
+        self.imageURL = card.imageURIs.artCrop
     }
 }
