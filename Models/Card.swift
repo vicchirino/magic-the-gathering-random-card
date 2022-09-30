@@ -19,26 +19,30 @@ struct Card: Decodable {
     let artist: String
     let rarity: String
     let setName: String
+    var saved: Bool
+    
+    mutating func setSaved() {
+        self.saved = !self.saved
+    }
     
     struct CardImageURIs: Decodable {
-        let small: String
-        let normal: String
         let large: String
         let artCrop: String
         
         enum CodingKeys: String, CodingKey {
-            case small
-            case normal
             case large
             case artCrop = "art_crop"
         }
         
         init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
-            small = try values.decode(String.self, forKey: .small)
-            normal = try values.decode(String.self, forKey: .normal)
             large = try values.decode(String.self, forKey: .large)
             artCrop = try values.decode(String.self, forKey: .artCrop)
+        }
+        
+        init(with artURL: String, largeURL: String) {
+            large = largeURL
+            artCrop = artURL
         }
     }
 
@@ -75,6 +79,40 @@ struct Card: Decodable {
         flavorText = _flavorText
         oracleText = try values.decode(String.self, forKey: .oracleText)
         imageURIs = try values.decode(CardImageURIs.self, forKey: .imageURIs)
+        saved = false
+    }
+    
+    init(from cardData: CardData) {
+        id = cardData.id ?? ""
+        name = cardData.name ?? ""
+        rarity = cardData.rarity ?? ""
+        artist = cardData.artist ?? ""
+        layout = cardData.layout ?? ""
+        type = cardData.type ?? ""
+        setName = cardData.setName ?? ""
+        flavorText = cardData.flavorText
+        oracleText = cardData.oracleText ?? ""
+        imageURIs = CardImageURIs.init(with: cardData.artURL ?? "", largeURL: cardData.imageURL ?? "")
+        saved = true
+    }
+    
+}
+
+struct TestCard {
+    static let card: Card = {
+        let url = Bundle.main.url(forResource: "Card", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return try! decoder.decode(Card.self, from: data)
+    }()
+}
+
+extension CardData {
+    
+    func toCardModel() -> Card {
+        let cardModel = Card(from: self)
+        return cardModel
     }
     
 }

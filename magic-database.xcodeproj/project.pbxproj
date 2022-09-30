@@ -31,6 +31,18 @@
 		8360469C28E4DD1D006CDE28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360469A28E4DD1D006CDE28 /* ContentView.swift */; };
 		8360469E28E4DEE7006CDE28 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8360469D28E4DEE7006CDE28 /* .gitignore */; };
 		8360469F28E4DEE7006CDE28 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8360469D28E4DEE7006CDE28 /* .gitignore */; };
+		836046A228E5D551006CDE28 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836046A028E5D551006CDE28 /* Model.xcdatamodeld */; };
+		836046A328E5D551006CDE28 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836046A028E5D551006CDE28 /* Model.xcdatamodeld */; };
+		836046A528E5E31E006CDE28 /* CardAsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836046A428E5E31E006CDE28 /* CardAsyncImageView.swift */; };
+		836046A628E5E31E006CDE28 /* CardAsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836046A428E5E31E006CDE28 /* CardAsyncImageView.swift */; };
+		839FAD1828E7400D00BC816C /* Card.json in Resources */ = {isa = PBXBuildFile; fileRef = 839FAD1728E7400D00BC816C /* Card.json */; };
+		839FAD1928E7400D00BC816C /* Card.json in Resources */ = {isa = PBXBuildFile; fileRef = 839FAD1728E7400D00BC816C /* Card.json */; };
+		839FAD1B28E7457E00BC816C /* CardInformationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */; };
+		839FAD1C28E7457E00BC816C /* CardInformationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */; };
+		839FAD1F28E771A800BC816C /* SavedCardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD1E28E771A800BC816C /* SavedCardsListView.swift */; };
+		839FAD2028E771A800BC816C /* SavedCardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD1E28E771A800BC816C /* SavedCardsListView.swift */; };
+		83F475D328E5F288008DA84C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F475D228E5F288008DA84C /* Persistence.swift */; };
+		83F475D428E5F288008DA84C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F475D228E5F288008DA84C /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +81,12 @@
 		8360469728E4D990006CDE28 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8360469A28E4DD1D006CDE28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8360469D28E4DEE7006CDE28 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		836046A128E5D551006CDE28 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		836046A428E5E31E006CDE28 /* CardAsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAsyncImageView.swift; sourceTree = "<group>"; };
+		839FAD1728E7400D00BC816C /* Card.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Card.json; sourceTree = "<group>"; };
+		839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformationStackView.swift; sourceTree = "<group>"; };
+		839FAD1E28E771A800BC816C /* SavedCardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCardsListView.swift; sourceTree = "<group>"; };
+		83F475D228E5F288008DA84C /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,8 @@
 		8360464A28E483C6006CDE28 = {
 			isa = PBXGroup;
 			children = (
+				83F475D228E5F288008DA84C /* Persistence.swift */,
+				836046A028E5D551006CDE28 /* Model.xcdatamodeld */,
 				8360469D28E4DEE7006CDE28 /* .gitignore */,
 				8360469328E4D3A5006CDE28 /* Extensions */,
 				8360468C28E48F7F006CDE28 /* ViewModels */,
@@ -161,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				8360468128E48772006CDE28 /* Card.swift */,
+				839FAD1728E7400D00BC816C /* Card.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,9 +189,9 @@
 		8360468428E48ADE006CDE28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8360468528E48B0E006CDE28 /* RandomCardView.swift */,
-				8360469028E4CF4B006CDE28 /* CardInformationView.swift */,
+				839FAD1D28E7714100BC816C /* RandomCardView */,
 				8360469A28E4DD1D006CDE28 /* ContentView.swift */,
+				839FAD1E28E771A800BC816C /* SavedCardsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +219,17 @@
 				8360469728E4D990006CDE28 /* UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		839FAD1D28E7714100BC816C /* RandomCardView */ = {
+			isa = PBXGroup;
+			children = (
+				839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */,
+				836046A428E5E31E006CDE28 /* CardAsyncImageView.swift */,
+				8360469028E4CF4B006CDE28 /* CardInformationView.swift */,
+				8360468528E48B0E006CDE28 /* RandomCardView.swift */,
+			);
+			path = RandomCardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +339,7 @@
 				8360465E28E483C8006CDE28 /* Preview Assets.xcassets in Resources */,
 				8360469E28E4DEE7006CDE28 /* .gitignore in Resources */,
 				8360465B28E483C8006CDE28 /* Assets.xcassets in Resources */,
+				839FAD1828E7400D00BC816C /* Card.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8360469F28E4DEE7006CDE28 /* .gitignore in Resources */,
+				839FAD1928E7400D00BC816C /* Card.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836046A528E5E31E006CDE28 /* CardAsyncImageView.swift in Sources */,
 				8360468628E48B0E006CDE28 /* RandomCardView.swift in Sources */,
 				8360468228E48772006CDE28 /* Card.swift in Sources */,
 				8360468A28E48BDB006CDE28 /* WebService.swift in Sources */,
@@ -339,7 +374,11 @@
 				8360465728E483C6006CDE28 /* magic_databaseApp.swift in Sources */,
 				8360469B28E4DD1D006CDE28 /* ContentView.swift in Sources */,
 				8360469828E4D990006CDE28 /* UIColor.swift in Sources */,
+				836046A228E5D551006CDE28 /* Model.xcdatamodeld in Sources */,
+				83F475D328E5F288008DA84C /* Persistence.swift in Sources */,
+				839FAD1F28E771A800BC816C /* SavedCardsListView.swift in Sources */,
 				8360468E28E48FBD006CDE28 /* RandomCardViewModel.swift in Sources */,
+				839FAD1B28E7457E00BC816C /* CardInformationStackView.swift in Sources */,
 				8360469128E4CF4B006CDE28 /* CardInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836046A628E5E31E006CDE28 /* CardAsyncImageView.swift in Sources */,
 				8360468728E48B0E006CDE28 /* RandomCardView.swift in Sources */,
 				8360466828E483C8006CDE28 /* magic_databaseTests.swift in Sources */,
 				8360468B28E48BDB006CDE28 /* WebService.swift in Sources */,
@@ -355,7 +395,11 @@
 				8360468328E48772006CDE28 /* Card.swift in Sources */,
 				8360469C28E4DD1D006CDE28 /* ContentView.swift in Sources */,
 				8360469928E4D990006CDE28 /* UIColor.swift in Sources */,
+				836046A328E5D551006CDE28 /* Model.xcdatamodeld in Sources */,
+				83F475D428E5F288008DA84C /* Persistence.swift in Sources */,
+				839FAD2028E771A800BC816C /* SavedCardsListView.swift in Sources */,
 				8360468F28E48FBD006CDE28 /* RandomCardViewModel.swift in Sources */,
+				839FAD1C28E7457E00BC816C /* CardInformationStackView.swift in Sources */,
 				8360469228E4CF4B006CDE28 /* CardInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,7 +569,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -555,7 +599,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -675,6 +719,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		836046A028E5D551006CDE28 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				836046A128E5D551006CDE28 /* Model.xcdatamodel */,
+			);
+			currentVersion = 836046A128E5D551006CDE28 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8360464B28E483C6006CDE28 /* Project object */;
 }
