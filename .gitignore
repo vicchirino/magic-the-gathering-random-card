@@ -31,3 +31,11 @@ build/
 Pods/
 Podfile.lock
 
+# Environment variables
+.env.default
+
+# Fastlane
+/fastlane/builds
+/fastlane/screenshots
+/fastlane/metadata
+/fastlane/report.xml

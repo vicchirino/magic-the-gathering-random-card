@@ -1,0 +1,10 @@
+storage_mode("git")
+git_user_email("#{ENV['GIT_ACCOUNT_EMAIL']}") # Git user email
+git_url("#{ENV['GIT_REPOSITORY_URL']}")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+username("#{ENV['APPLE_DEVELOPER_EMAIL']}") # Your Apple Developer Portal username
+team_name("#{ENV['APPLE_DEVELOPER_TEAM_NAME']}")
+
+app_identifier(["#{ENV['APP_IDENTIFIER']}"])
+keychain_password("#{ENV['APPLE_DEVELOPER_PASSWORD']}")
