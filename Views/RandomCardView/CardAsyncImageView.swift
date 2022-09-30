@@ -29,6 +29,7 @@ struct CardAsyncImageView: View {
                 Color.orange
             }
         }
+        
     }
 }
 

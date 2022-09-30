@@ -28,4 +28,16 @@ public final class WebService {
             .eraseToAnyPublisher()
     }
     
+    func getCardBy(_ id: String) -> AnyPublisher<Card, Error> {
+        guard let url = URL(string: baseURL + "cards/" + id) else {
+            fatalError("Invalid URL")
+        }
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .receive(on: RunLoop.main)
+            .map(\.data)
+            .decode(type: Card.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
+    
 }

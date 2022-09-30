@@ -10,20 +10,25 @@ import SwiftUI
 struct RandomCardView: View {
     
     @StateObject private var randomCardVM = RandomCardViewModel()
+    @State private var isDisplayingSavedCards = false
 
     var body: some View {
         GeometryReader { proxy in
+            NavigationLink(destination: SavedCardsListView(savedCards: randomCardVM.savedCards), isActive: $isDisplayingSavedCards) { EmptyView() }
+            
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 0) {
                     VStack {
                         CardAsyncImageView(cardImageURL: randomCardVM.randomCard?.imageURIs.large)
-                    }
-                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                    }.padding([.top, .leading, .trailing], 20)
                     .frame(width: proxy.size.width, height: proxy.size.width * 1.39, alignment: .topLeading)
                     
                     Button {
                         withAnimation {
-                            randomCardVM.save(card: randomCardVM.randomCard)
+                            guard let randomCard = randomCardVM.randomCard else {
+                                return
+                            }
+                            randomCardVM.save(card: randomCard)
                         }
                     } label: {
                         HStack {
@@ -31,9 +36,9 @@ struct RandomCardView: View {
                                 .resizable()
                                 .frame(width: 20, height: 25, alignment: .center)
                             Text((randomCardVM.randomCard?.saved ?? false) ? "Card saved!" : "Save the card")
-                                .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
+                                .padding([.top], 5)
                         }.foregroundColor(.black)
-                    }.padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
+                    }.padding([.leading, .trailing, .bottom], 20)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     Divider()
@@ -44,7 +49,7 @@ struct RandomCardView: View {
             }
                 .toolbar {
                     Button {
-                        print("Saved List")
+                        self.isDisplayingSavedCards = true
                     } label: {
                         Image(systemName: "heart.text.square.fill").foregroundColor(.white)
                     }
