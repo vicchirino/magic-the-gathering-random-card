@@ -15,7 +15,6 @@ struct CardInformationView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            
             if let _informationDescription = informationDescription {
                 Text(informationTitle)
                     .font(.headline)
@@ -28,6 +27,7 @@ struct CardInformationView: View {
                     .active(isItalic, Text.italic)
             }
         }
+        .foregroundColor(.black)
         .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
     }
 }

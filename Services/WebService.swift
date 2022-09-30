@@ -16,7 +16,6 @@ public final class WebService {
     
     private var baseURL = "https://api.scryfall.com/"
     
-    
     func getRandomCard() -> AnyPublisher<Card, Error> {
         guard let url = URL(string: baseURL + "cards/random") else {
             fatalError("Invalid URL")

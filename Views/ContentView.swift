@@ -9,23 +9,18 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    @ObservedObject private var randomCardVM = RandomCardViewModel()
-
     var body: some View {
         NavigationView {
-            RandomCardView(randomCard: randomCardVM.randomCard)
+            RandomCardView()
                 .navigationTitle("Card of the day")
         }
+        .foregroundColor(.black)
         .navigationViewStyle(.stack)
-        .onAppear {
-            self.randomCardVM.fetchRandomCard()
-        }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

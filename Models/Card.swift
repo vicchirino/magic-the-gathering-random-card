@@ -19,6 +19,11 @@ struct Card: Decodable {
     let artist: String
     let rarity: String
     let setName: String
+    var saved: Bool
+    
+    mutating func setSaved() {
+        self.saved = !self.saved
+    }
     
     struct CardImageURIs: Decodable {
         let small: String
@@ -75,6 +80,17 @@ struct Card: Decodable {
         flavorText = _flavorText
         oracleText = try values.decode(String.self, forKey: .oracleText)
         imageURIs = try values.decode(CardImageURIs.self, forKey: .imageURIs)
+        saved = false
     }
     
+}
+
+struct TestCard {
+    static let card: Card = {
+        let url = Bundle.main.url(forResource: "Card", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return try! decoder.decode(Card.self, from: data)
+    }()
 }
