@@ -41,6 +41,8 @@
 		839FAD1C28E7457E00BC816C /* CardInformationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */; };
 		839FAD1F28E771A800BC816C /* SavedCardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD1E28E771A800BC816C /* SavedCardsListView.swift */; };
 		839FAD2028E771A800BC816C /* SavedCardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD1E28E771A800BC816C /* SavedCardsListView.swift */; };
+		839FAD2D28E79F1300BC816C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD2C28E79F1300BC816C /* View.swift */; };
+		839FAD2E28E79F1300BC816C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FAD2C28E79F1300BC816C /* View.swift */; };
 		83F475D328E5F288008DA84C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F475D228E5F288008DA84C /* Persistence.swift */; };
 		83F475D428E5F288008DA84C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F475D228E5F288008DA84C /* Persistence.swift */; };
 /* End PBXBuildFile section */
@@ -63,7 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8360465328E483C6006CDE28 /* magic-database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "magic-database.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8360465328E483C6006CDE28 /* Random MTG .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random MTG .app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8360465628E483C6006CDE28 /* magic_databaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magic_databaseApp.swift; sourceTree = "<group>"; };
 		8360465A28E483C8006CDE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8360465D28E483C8006CDE28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -86,6 +88,8 @@
 		839FAD1728E7400D00BC816C /* Card.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Card.json; sourceTree = "<group>"; };
 		839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformationStackView.swift; sourceTree = "<group>"; };
 		839FAD1E28E771A800BC816C /* SavedCardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCardsListView.swift; sourceTree = "<group>"; };
+		839FAD2B28E79D4500BC816C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		839FAD2C28E79F1300BC816C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		83F475D228E5F288008DA84C /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,14 +121,13 @@
 		8360464A28E483C6006CDE28 = {
 			isa = PBXGroup;
 			children = (
-				83F475D228E5F288008DA84C /* Persistence.swift */,
-				836046A028E5D551006CDE28 /* Model.xcdatamodeld */,
 				8360469D28E4DEE7006CDE28 /* .gitignore */,
 				8360469328E4D3A5006CDE28 /* Extensions */,
 				8360468C28E48F7F006CDE28 /* ViewModels */,
 				8360468828E48BCE006CDE28 /* Services */,
 				8360468428E48ADE006CDE28 /* Views */,
 				8360468028E48752006CDE28 /* Models */,
+				839FAD2A28E79AD800BC816C /* CoreData */,
 				8360465528E483C6006CDE28 /* magic-database */,
 				8360466628E483C8006CDE28 /* magic-databaseTests */,
 				8360467028E483C8006CDE28 /* magic-databaseUITests */,
@@ -135,7 +138,7 @@
 		8360465428E483C6006CDE28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8360465328E483C6006CDE28 /* magic-database.app */,
+				8360465328E483C6006CDE28 /* Random MTG .app */,
 				8360466328E483C8006CDE28 /* magic-databaseTests.xctest */,
 				8360466D28E483C8006CDE28 /* magic-databaseUITests.xctest */,
 			);
@@ -145,6 +148,7 @@
 		8360465528E483C6006CDE28 /* magic-database */ = {
 			isa = PBXGroup;
 			children = (
+				839FAD2B28E79D4500BC816C /* Info.plist */,
 				8360465628E483C6006CDE28 /* magic_databaseApp.swift */,
 				8360465A28E483C8006CDE28 /* Assets.xcassets */,
 				8360465C28E483C8006CDE28 /* Preview Content */,
@@ -217,6 +221,7 @@
 			children = (
 				8360469428E4D3C1006CDE28 /* TextExtension.swift */,
 				8360469728E4D990006CDE28 /* UIColor.swift */,
+				839FAD2C28E79F1300BC816C /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +235,15 @@
 				8360468528E48B0E006CDE28 /* RandomCardView.swift */,
 			);
 			path = RandomCardView;
+			sourceTree = "<group>";
+		};
+		839FAD2A28E79AD800BC816C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				836046A028E5D551006CDE28 /* Model.xcdatamodeld */,
+				83F475D228E5F288008DA84C /* Persistence.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +263,7 @@
 			);
 			name = "magic-database";
 			productName = "magic-database";
-			productReference = 8360465328E483C6006CDE28 /* magic-database.app */;
+			productReference = 8360465328E483C6006CDE28 /* Random MTG .app */;
 			productType = "com.apple.product-type.application";
 		};
 		8360466228E483C8006CDE28 /* magic-databaseTests */ = {
@@ -368,6 +382,7 @@
 			files = (
 				836046A528E5E31E006CDE28 /* CardAsyncImageView.swift in Sources */,
 				8360468628E48B0E006CDE28 /* RandomCardView.swift in Sources */,
+				839FAD2D28E79F1300BC816C /* View.swift in Sources */,
 				8360468228E48772006CDE28 /* Card.swift in Sources */,
 				8360468A28E48BDB006CDE28 /* WebService.swift in Sources */,
 				8360469528E4D3C1006CDE28 /* TextExtension.swift in Sources */,
@@ -389,6 +404,7 @@
 			files = (
 				836046A628E5E31E006CDE28 /* CardAsyncImageView.swift in Sources */,
 				8360468728E48B0E006CDE28 /* RandomCardView.swift in Sources */,
+				839FAD2E28E79F1300BC816C /* View.swift in Sources */,
 				8360466828E483C8006CDE28 /* magic_databaseTests.swift in Sources */,
 				8360468B28E48BDB006CDE28 /* WebService.swift in Sources */,
 				8360469628E4D3C1006CDE28 /* TextExtension.swift in Sources */,
@@ -554,6 +570,7 @@
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "magic-database/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -566,7 +583,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorchirino.magic-database";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Random MTG ";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -584,6 +601,7 @@
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "magic-database/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -596,7 +614,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorchirino.magic-database";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Random MTG ";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

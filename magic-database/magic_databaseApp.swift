@@ -26,12 +26,14 @@ struct magic_databaseApp: App {
             barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             barAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         }
+                
         barAppearance.tintColor = .white
     }
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .statusBarStyle(.lightContent) 
         }
     }
 }

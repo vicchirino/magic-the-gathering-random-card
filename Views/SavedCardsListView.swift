@@ -34,10 +34,13 @@ struct SavedCardsListView: View {
 
                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 }
+//                .listRowBackground(Color(uiColor: .lightGrayColor))
             }
         .listStyle(.grouped)
         .navigationTitle("Saved cards")
+        .background()
     }
+    
 }
 
 struct SavedCardsListView_Previews: PreviewProvider {
