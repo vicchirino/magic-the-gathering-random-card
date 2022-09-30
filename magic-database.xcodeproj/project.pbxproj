@@ -64,6 +64,7 @@
 		839FAD4328E7A53700BC816C /* .env.default in Resources */ = {isa = PBXBuildFile; fileRef = 839FAD4128E7A53700BC816C /* .env.default */; };
 		839FAD4428E7A53700BC816C /* .env.default in Resources */ = {isa = PBXBuildFile; fileRef = 839FAD4128E7A53700BC816C /* .env.default */; };
 		839FAD4528E7A58D00BC816C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836046A028E5D551006CDE28 /* Model.xcdatamodeld */; };
+		839FAD4728E7A77600BC816C /* magic_databaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360466728E483C8006CDE28 /* magic_databaseTests.swift */; };
 		83F475D328E5F288008DA84C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F475D228E5F288008DA84C /* Persistence.swift */; };
 		83F475D428E5F288008DA84C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F475D228E5F288008DA84C /* Persistence.swift */; };
 /* End PBXBuildFile section */
@@ -454,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839FAD4728E7A77600BC816C /* magic_databaseTests.swift in Sources */,
 				839FAD3C28E7A50800BC816C /* WebService.swift in Sources */,
 				839FAD3A28E7A50300BC816C /* CardAsyncImageView.swift in Sources */,
 				839FAD3E28E7A50D00BC816C /* View.swift in Sources */,

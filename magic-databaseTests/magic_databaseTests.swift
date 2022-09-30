@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import magic_database
 
 class magic_databaseTests: XCTestCase {
 
