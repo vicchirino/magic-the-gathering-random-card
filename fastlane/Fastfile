@@ -4,7 +4,7 @@ default_platform(:ios)
 platform :ios do
   
   desc "Sumbit app to App Store"
-  lane: release do
+  lane :release do
     sync_certificates
     build_ipa
     snapshot
@@ -32,7 +32,7 @@ platform :ios do
   desc "Create/Update the certificates"
   lane :sync_certificates do 
     # ENVIRONMENT: [development, appstore, adhoc, enterprise]
-    match(type: "#{ENV['ENVIRONMENT']}", readonly: true)
+    match(type: "#{ENV['ENVIRONMENT']}", readonly: false)
   end
 
   desc "Builds an .ipa file of the app"
@@ -43,4 +43,26 @@ platform :ios do
     gym(xcargs: "-allowProvisioningUpdates")
   end
 
+  desc "Build bundler identifier"
+  lane :build_bundle_identifier do
+    produce(
+    username: "#{ENV['APPLE_DEVELOPER_EMAIL']}",
+    app_identifier: "#{ENV['APP_IDENTIFIER']}",
+    app_name: 'Random MTG',
+    language: "English",
+    app_version: "1.0",
+    # sku: '123',
+    team_name: "#{ENV['APPLE_DEVELOPER_TEAM_NAME']}", # only necessary when in multiple teams
+
+    # Optional
+    # App services can be enabled during app creation
+    enable_services: {
+      access_wifi: "on",                        # Valid values: "on", "off"
+      auto_fill_credential: "on",               # Valid values: "on", "off"
+      custom_network_protocol: "on",            # Valid values: "on", "off"
+      in_app_purchase: "on",                    # Valid values: "on", "off"
+      network_extension: "on",                  # Valid values: "on", "off"
+    }
+  )
+  end
 end
