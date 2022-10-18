@@ -53,6 +53,7 @@ platform :ios do
     app_version: "1.0",
     # sku: '123',
     team_name: "#{ENV['APPLE_DEVELOPER_TEAM_NAME']}", # only necessary when in multiple teams
+    itc_team_name: "#{ENV['APPLE_DEVELOPER_TEAM_NAME']}", # only necessary when in multiple teams,
 
     # Optional
     # App services can be enabled during app creation

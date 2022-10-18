@@ -87,7 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8360465328E483C6006CDE28 /* Random MTG .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random MTG .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8360465328E483C6006CDE28 /* Random-MTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random-MTG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8360465628E483C6006CDE28 /* magic_databaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magic_databaseApp.swift; sourceTree = "<group>"; };
 		8360465A28E483C8006CDE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8360465D28E483C8006CDE28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		8360465428E483C6006CDE28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8360465328E483C6006CDE28 /* Random MTG .app */,
+				8360465328E483C6006CDE28 /* Random-MTG.app */,
 				8360466328E483C8006CDE28 /* magic-databaseTests.xctest */,
 				8360466D28E483C8006CDE28 /* magic-databaseUITests.xctest */,
 			);
@@ -289,7 +289,7 @@
 			);
 			name = "magic-database";
 			productName = "magic-database";
-			productReference = 8360465328E483C6006CDE28 /* Random MTG .app */;
+			productReference = 8360465328E483C6006CDE28 /* Random-MTG.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8360466228E483C8006CDE28 /* magic-databaseTests */ = {
@@ -612,8 +612,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"magic-database/Preview Content\"";
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				ENABLE_PREVIEWS = YES;
@@ -631,7 +632,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorchirino.random-mtg";
-				PRODUCT_NAME = "Random MTG ";
+				PRODUCT_NAME = "Random-MTG";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -643,8 +645,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"magic-database/Preview Content\"";
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				ENABLE_PREVIEWS = YES;
@@ -662,7 +665,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorchirino.random-mtg";
-				PRODUCT_NAME = "Random MTG ";
+				PRODUCT_NAME = "Random-MTG";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -675,7 +679,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -695,7 +699,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -714,7 +718,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -732,7 +736,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;

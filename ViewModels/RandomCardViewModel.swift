@@ -86,6 +86,7 @@ class RandomCardViewModel: NSObject, ObservableObject{
     }
     
     func save(card: Card) {
+        
         // TODO: Move this to other part.
         let cardForSave = CardData(context: context)
         cardForSave.setName = card.setName
@@ -100,9 +101,9 @@ class RandomCardViewModel: NSObject, ObservableObject{
         cardForSave.artURL = card.imageURIs.artCrop
         cardForSave.imageURL = card.imageURIs.large
         do {
-            try context.save()
             self.randomCard?.setSaved()
             if self.randomCard?.saved == true {
+                try context.save()
                 self.savedCards.append(card)
             } else {
                 self.savedCards = self.savedCards.filter { $0.id != card.id }
