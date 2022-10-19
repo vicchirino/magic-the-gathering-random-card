@@ -7,8 +7,15 @@ platform :ios do
   lane :release do
     sync_certificates
     build_ipa
-    snapshot
-    deliver
+    # snapshot
+    increment_build_number
+    increment_version_number
+    deliver(
+      username: "#{ENV['APPLE_DEVELOPER_EMAIL']}",
+      team_name: "#{ENV['APPLE_DEVELOPER_TEAM_NAME']}",
+      skip_screenshots: true,
+
+    )
   end
     
   desc "Package and submit a new version to TestFlight"
@@ -16,12 +23,8 @@ platform :ios do
     # Create/Update the certificates
     sync_certificates
 
-    # Increment the build number
+    build_ipa
     increment_build_number
-
-    # Build your app - more options available
-    gym
-
     # Upload to TestFlight
     pilot(
       username: "#{ENV['APPLE_DEVELOPER_EMAIL']}",
@@ -38,9 +41,15 @@ platform :ios do
   desc "Builds an .ipa file of the app"
   lane :build_ipa do
     # Increase the build number by 1
-    increment_build_number
     # Creates a signed file
-    gym(xcargs: "-allowProvisioningUpdates")
+    gym(
+      clean:true,
+      xcargs: "-allowProvisioningUpdates",
+      output_directory: "./build",
+      build_path: "./build",
+      output_name: "Random-MTG.ipa",
+      buildlog_path: "./build/logs",
+    )
   end
 
   desc "Build bundler identifier"
