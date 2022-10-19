@@ -19,6 +19,7 @@ struct Card: Decodable {
     let artist: String
     let rarity: String
     let setName: String
+    let set: String
     var saved: Bool
     
     mutating func setSaved() {
@@ -51,6 +52,7 @@ struct Card: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
         case name
+        case set
         case layout
         case artist
         case rarity
@@ -65,6 +67,7 @@ struct Card: Decodable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(String.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
+        set = try values.decode(String.self, forKey: .set)
         rarity = try values.decode(String.self, forKey: .rarity)
         artist = try values.decode(String.self, forKey: .artist)
         layout = try values.decode(String.self, forKey: .layout)
@@ -92,6 +95,7 @@ struct Card: Decodable {
         setName = cardData.setName ?? ""
         flavorText = cardData.flavorText
         oracleText = cardData.oracleText ?? ""
+        set = cardData.set ?? ""
         imageURIs = CardImageURIs.init(with: cardData.artURL ?? "", largeURL: cardData.imageURL ?? "")
         saved = true
     }
@@ -109,10 +113,8 @@ struct TestCard {
 }
 
 extension CardData {
-    
     func toCardModel() -> Card {
         let cardModel = Card(from: self)
         return cardModel
     }
-    
 }

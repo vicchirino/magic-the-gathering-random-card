@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MTGSetIcon
 
 struct RandomCardView: View {
     
@@ -14,7 +15,7 @@ struct RandomCardView: View {
 
     var body: some View {
         GeometryReader { proxy in
-            NavigationLink(destination: SavedCardsListView(savedCards: randomCardVM.savedCards), isActive: $isDisplayingSavedCards) { EmptyView() }
+            NavigationLink(destination: SavedCardsListView(savedCards: randomCardVM.savedCards.map { $0.toCardModel() }), isActive: $isDisplayingSavedCards) { EmptyView() }
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 0) {

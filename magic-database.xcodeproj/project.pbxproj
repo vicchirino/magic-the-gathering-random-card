@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833366C42900457A003E1B3B /* CardSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833366C32900457A003E1B3B /* CardSetView.swift */; };
+		833366C52900457A003E1B3B /* CardSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833366C32900457A003E1B3B /* CardSetView.swift */; };
+		833366C62900457A003E1B3B /* CardSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833366C32900457A003E1B3B /* CardSetView.swift */; };
 		8360465728E483C6006CDE28 /* magic_databaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360465628E483C6006CDE28 /* magic_databaseApp.swift */; };
 		8360465B28E483C8006CDE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8360465A28E483C8006CDE28 /* Assets.xcassets */; };
 		8360465E28E483C8006CDE28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8360465D28E483C8006CDE28 /* Preview Assets.xcassets */; };
@@ -65,6 +68,7 @@
 		839FAD4428E7A53700BC816C /* .env.default in Resources */ = {isa = PBXBuildFile; fileRef = 839FAD4128E7A53700BC816C /* .env.default */; };
 		839FAD4528E7A58D00BC816C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836046A028E5D551006CDE28 /* Model.xcdatamodeld */; };
 		839FAD4728E7A77600BC816C /* magic_databaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360466728E483C8006CDE28 /* magic_databaseTests.swift */; };
+		83A77FAA28FF499D0024D58F /* MTGSetIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 83A77FA928FF499D0024D58F /* MTGSetIcon */; };
 		83F475D328E5F288008DA84C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F475D228E5F288008DA84C /* Persistence.swift */; };
 		83F475D428E5F288008DA84C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F475D228E5F288008DA84C /* Persistence.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		833366C32900457A003E1B3B /* CardSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetView.swift; sourceTree = "<group>"; };
+		833366C729005918003E1B3B /* MTGSetIcon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MTGSetIcon; sourceTree = "<group>"; };
 		8360465328E483C6006CDE28 /* Random-MTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random-MTG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8360465628E483C6006CDE28 /* magic_databaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magic_databaseApp.swift; sourceTree = "<group>"; };
 		8360465A28E483C8006CDE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A77FAA28FF499D0024D58F /* MTGSetIcon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 		8360464A28E483C6006CDE28 = {
 			isa = PBXGroup;
 			children = (
+				833366C729005918003E1B3B /* MTGSetIcon */,
 				8360469D28E4DEE7006CDE28 /* .gitignore */,
 				839FAD4128E7A53700BC816C /* .env.default */,
 				8360469328E4D3A5006CDE28 /* Extensions */,
@@ -157,6 +165,7 @@
 				8360466628E483C8006CDE28 /* magic-databaseTests */,
 				8360467028E483C8006CDE28 /* magic-databaseUITests */,
 				8360465428E483C6006CDE28 /* Products */,
+				83A77FA828FF499D0024D58F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +268,7 @@
 				836046A428E5E31E006CDE28 /* CardAsyncImageView.swift */,
 				8360469028E4CF4B006CDE28 /* CardInformationView.swift */,
 				8360468528E48B0E006CDE28 /* RandomCardView.swift */,
+				833366C32900457A003E1B3B /* CardSetView.swift */,
 			);
 			path = RandomCardView;
 			sourceTree = "<group>";
@@ -270,6 +280,13 @@
 				83F475D228E5F288008DA84C /* Persistence.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		83A77FA828FF499D0024D58F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +305,9 @@
 			dependencies = (
 			);
 			name = "magic-database";
+			packageProductDependencies = (
+				83A77FA928FF499D0024D58F /* MTGSetIcon */,
+			);
 			productName = "magic-database";
 			productReference = 8360465328E483C6006CDE28 /* Random-MTG.app */;
 			productType = "com.apple.product-type.application";
@@ -423,6 +443,7 @@
 				83F475D328E5F288008DA84C /* Persistence.swift in Sources */,
 				839FAD1F28E771A800BC816C /* SavedCardsListView.swift in Sources */,
 				8360468E28E48FBD006CDE28 /* RandomCardViewModel.swift in Sources */,
+				833366C42900457A003E1B3B /* CardSetView.swift in Sources */,
 				839FAD1B28E7457E00BC816C /* CardInformationStackView.swift in Sources */,
 				8360469128E4CF4B006CDE28 /* CardInformationView.swift in Sources */,
 			);
@@ -447,6 +468,7 @@
 				839FAD2028E771A800BC816C /* SavedCardsListView.swift in Sources */,
 				8360468F28E48FBD006CDE28 /* RandomCardViewModel.swift in Sources */,
 				839FAD1C28E7457E00BC816C /* CardInformationStackView.swift in Sources */,
+				833366C52900457A003E1B3B /* CardSetView.swift in Sources */,
 				8360469228E4CF4B006CDE28 /* CardInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +482,7 @@
 				839FAD3A28E7A50300BC816C /* CardAsyncImageView.swift in Sources */,
 				839FAD3E28E7A50D00BC816C /* View.swift in Sources */,
 				839FAD3128E7A4D400BC816C /* magic_databaseApp.swift in Sources */,
+				833366C62900457A003E1B3B /* CardSetView.swift in Sources */,
 				8360467228E483C8006CDE28 /* magic_databaseUITests.swift in Sources */,
 				839FAD4528E7A58D00BC816C /* Model.xcdatamodeld in Sources */,
 				839FAD3F28E7A50F00BC816C /* UIColor.swift in Sources */,
@@ -789,6 +812,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83A77FA928FF499D0024D58F /* MTGSetIcon */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MTGSetIcon;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		836046A028E5D551006CDE28 /* Model.xcdatamodeld */ = {

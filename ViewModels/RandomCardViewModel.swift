@@ -73,7 +73,7 @@ class RandomCardViewModel: NSObject, ObservableObject{
     private let context = PersistenceController.shared.container.viewContext
     private let fetchedResultsController: NSFetchedResultsController<CardData>
     
-    @Published var savedCards: [Card] = []
+    @Published var savedCards: [CardData] = []
     
     private func setupFetchResultsController() {
         self.fetchedResultsController.delegate = self
@@ -82,32 +82,35 @@ class RandomCardViewModel: NSObject, ObservableObject{
         } catch {
             fatalError()
         }
-        savedCards = fetchedResultsController.fetchedObjects?.map({ $0.toCardModel() }) ?? []
+        savedCards = fetchedResultsController.fetchedObjects?.map({ $0 }) ?? []
     }
     
     func save(card: Card) {
+        if card.saved, let cardToDelete = self.savedCards.first(where: { $0.id == card.id }) {
+            context.delete(cardToDelete)
+            self.savedCards = self.savedCards.filter { $0.id != card.id }
+        } else {
+            // TODO: Move this to other part.
+            let cardForSave = CardData(context: context)
+            cardForSave.setName = card.setName
+            cardForSave.rarity = card.rarity
+            cardForSave.artist = card.artist
+            cardForSave.flavorText = card.flavorText
+            cardForSave.oracleText = card.oracleText
+            cardForSave.type = card.type
+            cardForSave.name = card.name
+            cardForSave.layout = card.layout
+            cardForSave.id = card.id
+            cardForSave.artURL = card.imageURIs.artCrop
+            cardForSave.imageURL = card.imageURIs.large
+            cardForSave.set = card.set
+            
+            self.savedCards.append(cardForSave)
+        }
+        self.randomCard?.setSaved()
         
-        // TODO: Move this to other part.
-        let cardForSave = CardData(context: context)
-        cardForSave.setName = card.setName
-        cardForSave.rarity = card.rarity
-        cardForSave.artist = card.artist
-        cardForSave.flavorText = card.flavorText
-        cardForSave.oracleText = card.oracleText
-        cardForSave.type = card.type
-        cardForSave.name = card.name
-        cardForSave.layout = card.layout
-        cardForSave.id = card.id
-        cardForSave.artURL = card.imageURIs.artCrop
-        cardForSave.imageURL = card.imageURIs.large
         do {
-            self.randomCard?.setSaved()
-            if self.randomCard?.saved == true {
-                try context.save()
-                self.savedCards.append(card)
-            } else {
-                self.savedCards = self.savedCards.filter { $0.id != card.id }
-            }
+            try context.save()
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")

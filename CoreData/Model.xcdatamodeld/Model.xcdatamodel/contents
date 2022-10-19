@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CardData" representedClassName="CardData" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="artist" optional="YES" attributeType="String"/>
         <attribute name="artURL" optional="YES" attributeType="String"/>
@@ -10,10 +10,8 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="oracleText" optional="YES" attributeType="String"/>
         <attribute name="rarity" optional="YES" attributeType="String"/>
+        <attribute name="set" optional="YES" attributeType="String"/>
         <attribute name="setName" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
-    <elements>
-        <element name="CardData" positionX="-63" positionY="-18" width="128" height="194"/>
-    </elements>
 </model>

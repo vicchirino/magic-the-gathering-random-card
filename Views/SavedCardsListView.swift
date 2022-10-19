@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MTGSetIcon
 
 struct SavedCardsListView: View {
     var savedCards: [Card]
@@ -15,26 +16,32 @@ struct SavedCardsListView: View {
                     AsyncImage(url: URL(string: card.imageURIs.large)) { image in
                         image.resizable()
                             .scaledToFit()
-//                            .overlay(Material.ultraThin)
                     } placeholder: {
                         ProgressView()
                             .padding(25)
                     }.frame(height: 100, alignment: .center)
                         .padding([.trailing], 5)
 
-                    VStack(alignment: .leading ,spacing: 5) {
+                    VStack(alignment: .leading, spacing: 5) {
                         Text("Name: \(card.name)")
                             .font(.system(size: 16))
                         Text("Type: \(card.type)")
                             .font(.system(size: 12))
-                        Text("Rarity: \(card.rarity)")
+                        Text("Rarity: \(card.rarity.capitalized)")
                             .font(.system(size: 12))
-                        Text("Set: \(card.setName)")
+                        HStack {
+                            Text("Set: \(card.setName)")
+                                .font(.system(size: 12))
+                            MTGSetIconView(set: card.set)
+                                .frame(width: 12)
+                        }
+                        Text("Artist: \(card.artist)")
                             .font(.system(size: 12))
-
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .foregroundColor(.black)
+                    .padding([.top, .bottom], 5)
                 }
-//                .listRowBackground(Color(uiColor: .lightGrayColor))
             }
         .listStyle(.grouped)
         .navigationTitle("Saved cards")

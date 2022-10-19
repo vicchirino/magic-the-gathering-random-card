@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MTGSetIcon
 
 struct CardInformationView: View {
     
@@ -22,9 +23,12 @@ struct CardInformationView: View {
                 Spacer()
                     .frame(height: 10)
                 
-                Text(_informationDescription)
-                    .font(.subheadline)
-                    .active(isItalic, Text.italic)
+                HStack {
+                    Text(_informationDescription)
+                        .font(.subheadline)
+                        .active(isItalic, Text.italic)
+                }
+                
             }
         }
         .foregroundColor(.black)
