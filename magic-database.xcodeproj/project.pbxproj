@@ -10,6 +10,12 @@
 		833366C42900457A003E1B3B /* CardSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833366C32900457A003E1B3B /* CardSetView.swift */; };
 		833366C52900457A003E1B3B /* CardSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833366C32900457A003E1B3B /* CardSetView.swift */; };
 		833366C62900457A003E1B3B /* CardSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833366C32900457A003E1B3B /* CardSetView.swift */; };
+		833366CA290062DB003E1B3B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833366C8290062DB003E1B3B /* Info.plist */; };
+		833366CB290062DB003E1B3B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833366C8290062DB003E1B3B /* Info.plist */; };
+		833366D0290321EA003E1B3B /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 833366CF290321EA003E1B3B /* Networking */; };
+		8335E3992922D29500E697CD /* CardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335E3982922D29500E697CD /* CardRequest.swift */; };
+		8335E39A2922D29500E697CD /* CardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335E3982922D29500E697CD /* CardRequest.swift */; };
+		8335E39B2922D29500E697CD /* CardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335E3982922D29500E697CD /* CardRequest.swift */; };
 		8360465728E483C6006CDE28 /* magic_databaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360465628E483C6006CDE28 /* magic_databaseApp.swift */; };
 		8360465B28E483C8006CDE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8360465A28E483C8006CDE28 /* Assets.xcassets */; };
 		8360465E28E483C8006CDE28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8360465D28E483C8006CDE28 /* Preview Assets.xcassets */; };
@@ -93,6 +99,9 @@
 /* Begin PBXFileReference section */
 		833366C32900457A003E1B3B /* CardSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetView.swift; sourceTree = "<group>"; };
 		833366C729005918003E1B3B /* MTGSetIcon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MTGSetIcon; sourceTree = "<group>"; };
+		833366C8290062DB003E1B3B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		833366CE290321DA003E1B3B /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
+		8335E3982922D29500E697CD /* CardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRequest.swift; sourceTree = "<group>"; };
 		8360465328E483C6006CDE28 /* Random-MTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random-MTG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8360465628E483C6006CDE28 /* magic_databaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magic_databaseApp.swift; sourceTree = "<group>"; };
 		8360465A28E483C8006CDE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,7 +125,6 @@
 		839FAD1728E7400D00BC816C /* Card.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Card.json; sourceTree = "<group>"; };
 		839FAD1A28E7457E00BC816C /* CardInformationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformationStackView.swift; sourceTree = "<group>"; };
 		839FAD1E28E771A800BC816C /* SavedCardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCardsListView.swift; sourceTree = "<group>"; };
-		839FAD2B28E79D4500BC816C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		839FAD2C28E79F1300BC816C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		839FAD2F28E7A4B200BC816C /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		839FAD4128E7A53700BC816C /* .env.default */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env.default; sourceTree = "<group>"; };
@@ -128,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833366D0290321EA003E1B3B /* Networking in Frameworks */,
 				83A77FAA28FF499D0024D58F /* MTGSetIcon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +158,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		833366CC2901C712003E1B3B /* SavedCardsListView */ = {
+			isa = PBXGroup;
+			children = (
+				839FAD1E28E771A800BC816C /* SavedCardsListView.swift */,
+			);
+			path = SavedCardsListView;
+			sourceTree = "<group>";
+		};
 		8360464A28E483C6006CDE28 = {
 			isa = PBXGroup;
 			children = (
+				833366CE290321DA003E1B3B /* Networking */,
 				833366C729005918003E1B3B /* MTGSetIcon */,
 				8360469D28E4DEE7006CDE28 /* .gitignore */,
 				839FAD4128E7A53700BC816C /* .env.default */,
@@ -182,7 +200,7 @@
 		8360465528E483C6006CDE28 /* magic-database */ = {
 			isa = PBXGroup;
 			children = (
-				839FAD2B28E79D4500BC816C /* Info.plist */,
+				833366C8290062DB003E1B3B /* Info.plist */,
 				8360465628E483C6006CDE28 /* magic_databaseApp.swift */,
 				8360465A28E483C8006CDE28 /* Assets.xcassets */,
 				8360465C28E483C8006CDE28 /* Preview Content */,
@@ -228,9 +246,9 @@
 		8360468428E48ADE006CDE28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				833366CC2901C712003E1B3B /* SavedCardsListView */,
 				839FAD1D28E7714100BC816C /* RandomCardView */,
 				8360469A28E4DD1D006CDE28 /* ContentView.swift */,
-				839FAD1E28E771A800BC816C /* SavedCardsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				8360468928E48BDB006CDE28 /* WebService.swift */,
+				8335E3982922D29500E697CD /* CardRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -307,6 +326,7 @@
 			name = "magic-database";
 			packageProductDependencies = (
 				83A77FA928FF499D0024D58F /* MTGSetIcon */,
+				833366CF290321EA003E1B3B /* Networking */,
 			);
 			productName = "magic-database";
 			productReference = 8360465328E483C6006CDE28 /* Random-MTG.app */;
@@ -408,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833366CA290062DB003E1B3B /* Info.plist in Resources */,
 				8360469F28E4DEE7006CDE28 /* .gitignore in Resources */,
 				839FAD1928E7400D00BC816C /* Card.json in Resources */,
 				839FAD4328E7A53700BC816C /* .env.default in Resources */,
@@ -420,6 +441,7 @@
 			files = (
 				839FAD4428E7A53700BC816C /* .env.default in Resources */,
 				839FAD3728E7A4FC00BC816C /* Card.json in Resources */,
+				833366CB290062DB003E1B3B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +468,7 @@
 				833366C42900457A003E1B3B /* CardSetView.swift in Sources */,
 				839FAD1B28E7457E00BC816C /* CardInformationStackView.swift in Sources */,
 				8360469128E4CF4B006CDE28 /* CardInformationView.swift in Sources */,
+				8335E3992922D29500E697CD /* CardRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +483,7 @@
 				8360468B28E48BDB006CDE28 /* WebService.swift in Sources */,
 				8360469628E4D3C1006CDE28 /* TextExtension.swift in Sources */,
 				8360468328E48772006CDE28 /* Card.swift in Sources */,
+				8335E39A2922D29500E697CD /* CardRequest.swift in Sources */,
 				8360469C28E4DD1D006CDE28 /* ContentView.swift in Sources */,
 				839FAD3228E7A4D500BC816C /* magic_databaseApp.swift in Sources */,
 				8360469928E4D990006CDE28 /* UIColor.swift in Sources */,
@@ -484,6 +508,7 @@
 				839FAD3128E7A4D400BC816C /* magic_databaseApp.swift in Sources */,
 				833366C62900457A003E1B3B /* CardSetView.swift in Sources */,
 				8360467228E483C8006CDE28 /* magic_databaseUITests.swift in Sources */,
+				8335E39B2922D29500E697CD /* CardRequest.swift in Sources */,
 				839FAD4528E7A58D00BC816C /* Model.xcdatamodeld in Sources */,
 				839FAD3F28E7A50F00BC816C /* UIColor.swift in Sources */,
 				839FAD3428E7A4F500BC816C /* ContentView.swift in Sources */,
@@ -566,7 +591,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -620,7 +645,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -637,7 +662,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"magic-database/Preview Content\"";
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				ENABLE_PREVIEWS = YES;
@@ -646,9 +671,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,9 +683,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorchirino.random-mtg";
 				PRODUCT_NAME = "Random-MTG";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -670,7 +700,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"magic-database/Preview Content\"";
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				ENABLE_PREVIEWS = YES;
@@ -679,9 +709,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -690,9 +721,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victorchirino.random-mtg";
 				PRODUCT_NAME = "Random-MTG";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -702,7 +737,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -713,6 +748,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/magic-database.app/magic-database";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -722,7 +758,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -733,6 +769,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/magic-database.app/magic-database";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -741,7 +778,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -759,7 +796,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = QN34A58MDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -814,6 +851,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		833366CF290321EA003E1B3B /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
 		83A77FA928FF499D0024D58F /* MTGSetIcon */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MTGSetIcon;

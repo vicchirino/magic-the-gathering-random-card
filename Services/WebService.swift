@@ -7,9 +7,27 @@
 
 import Foundation
 import Combine
+import Networking
 
 protocol Request {
     
+}
+
+public class CardService {
+    private let networkingService: NetworkingService
+    
+    private init(networkingService: NetworkingService) {
+        self.networkingService = networkingService
+    }
+    
+    public convenience init() {
+        self.init(networkingService: DefaultNetworkingService())
+    }
+    
+    public func getRandomCard() async -> Result<Card, NetworkingError> {
+        let request = CardRequest.randomCard
+        return await networkingService.execute(request: request)
+    }
 }
 
 public final class WebService {

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardAsyncImageView: View {
     var cardImageURL: String?
+    @State var imageToSave: Image? = nil
+    
     
     var body: some View {
         AsyncImage(url: URL(string: cardImageURL ?? "")) { phase in
@@ -28,6 +30,8 @@ struct CardAsyncImageView: View {
                 // in the future:
                 Color.orange
             }
+        } .onLongPressGesture {
+//            UIImageWriteToSavedPhotosAlbum(imageToSave!, nil, nil, nil)
         }
         
     }

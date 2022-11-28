@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 
-struct Card: Decodable {
+public struct Card: Decodable {
     let id: String
     let name: String
     let layout: String
@@ -63,7 +63,7 @@ struct Card: Decodable {
         case flavorText = "flavor_text"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(String.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)

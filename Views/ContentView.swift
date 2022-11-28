@@ -14,9 +14,6 @@ struct ContentView: View {
             RandomCardView()
                 .navigationTitle("Card of the day")
         }
-        .foregroundColor(.white)
-        .accentColor(.white)
-        .navigationViewStyle(.stack)
         
     }
 }

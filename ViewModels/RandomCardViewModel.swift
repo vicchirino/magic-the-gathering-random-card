@@ -8,8 +8,11 @@
 import Foundation
 import Combine
 import CoreData
+import Networking
 
 class RandomCardViewModel: NSObject, ObservableObject{
+     
+    let cardService: CardService
     
     func getRandomCard() {
         let dateFormatter = DateFormatter()
@@ -40,6 +43,7 @@ class RandomCardViewModel: NSObject, ObservableObject{
                                                                    managedObjectContext: context,
                                                                    sectionNameKeyPath: nil,
                                                                    cacheName: nil)
+        self.cardService = CardService()
         super.init()
         setupFetchResultsController()
     }
@@ -50,10 +54,23 @@ class RandomCardViewModel: NSObject, ObservableObject{
     @Published var randomCard: Card?
     
     private func fetchRandomCard(completion: @escaping (Card) -> Void) {
-        self.cancellable = WebService().getRandomCard()
-            .sink(receiveCompletion: { _ in }, receiveValue: { card in
-                completion(card)
-            })
+//        self.cancellable = WebService().getRandomCard()
+//            .sink(receiveCompletion: { _ in }, receiveValue: { card in
+//                completion(card)
+//            })
+        
+        Task {
+            let result = await cardService.getRandomCard()
+            switch result {
+            case let .success(response):
+                print("HOLIS", response)
+
+                completion(response)
+            case let .failure(error):
+                print("error")
+            }
+            
+        }
     }
     
     private func fetchCardBy(_ id: String) {
